@@ -17,7 +17,7 @@
     #overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.95);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -74,11 +74,8 @@
 
   <script>
     function startVideo() {
-      const overlay = document.getElementById('overlay');
-      const video = document.getElementById('memeVideo');
-
-      overlay.style.display = 'none';
-      video.play();
+      document.getElementById('overlay').style.display = 'none';
+      document.getElementById('memeVideo').play();
     }
   </script>
 
