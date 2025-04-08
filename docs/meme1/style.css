@@ -19,13 +19,18 @@ body {
 
 /* Container for video + button */
 .container {
-  display: none; /* Hidden until video starts */
+  display: none; /* Hidden until prank activated */
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* Overlay */
+.container.active video {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Tap-to-prank overlay */
 #overlay {
   position: fixed;
   top: 0; left: 0;
@@ -46,39 +51,44 @@ body {
   max-width: 90%;
 }
 
-/* Red clickbait button */
+/* Red dramatic "DO NOT CLICK THIS" button */
 .click-bait-button {
-  padding: 16px 32px;
-  font-size: 1.2rem;
+  padding: 18px 36px;
+  font-size: 1.4rem;
   font-weight: bold;
-  background: red;
+  background: #ff0000;
   color: white;
   border: none;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
-  transition: background 0.2s;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+  transition: transform 0.2s ease, background 0.2s ease;
+  text-transform: uppercase;
 }
 
 .click-bait-button:hover {
-  background: #c40000;
+  background: #cc0000;
+  transform: scale(1.05);
 }
 
-/* Video styling */
+/* Subtle video reveal effect */
 video {
-  width: 90vw;
-  max-width: 600px;
+  width: 80vw;
+  max-width: 360px;
   border-radius: 12px;
   margin-top: 40px;
+  opacity: 0.2;
+  transition: opacity 0.4s ease, transform 0.3s ease;
 }
 
-/* Buy button styling */
+/* Big red Buy button */
 .buy-button {
+  display: inline-block;
   margin-top: 30px;
   padding: 15px 30px;
   font-size: 18px;
   font-weight: bold;
-  color: white;
   background-color: #ff0000;
+  color: white;
   text-decoration: none;
   border-radius: 8px;
   box-shadow: 0 4px #b30000;
@@ -89,4 +99,8 @@ video {
   background-color: #cc0000;
   box-shadow: 0 2px #800000;
   transform: translateY(2px);
+}
+
+.buy-button:visited {
+  color: white;
 }
