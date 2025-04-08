@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>You Got Pranked</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="video-container">
-    <video id="memeVideo" poster="video-poster.jpg">
+  <div id="overlay" onclick="startVideo()">
+    <h1>👀 You really scanned a stranger’s shirt?</h1>
+    <button class="click-bait-button">DO NOT CLICK THIS</button>
+  </div>
+
+  <div class="container">
+    <video id="memeVideo" controls>
       <source src="meme.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="overlay" id="overlay">
-      <h1>Tap to Get Pranked 😈</h1>
-    </div>
+
+    <a href="https://yourstore.com/product" class="buy-button" target="_blank">
+      You scanned it... now own it 🧠
+    </a>
   </div>
-  <a class="buy-button" href="https://yourstore.com/product" target="_blank">Buy the Shirt</a>
+
   <script src="script.js"></script>
 </body>
 </html>
