@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>You Got Pranked</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="overlay" onclick="startVideo()">
-    <h1>👀 You really scanned a stranger’s shirt?</h1>
-    <button class="click-bait-button">DO NOT CLICK THIS</button>
+  <div id="overlay">
+    <div class="overlay-inner">
+      <h1>👀 You really scanned a stranger’s shirt?</h1>
+      <button onclick="startVideo()" class="click-bait-button">DO NOT CLICK THIS</button>
+    </div>
   </div>
 
   <div class="container">
