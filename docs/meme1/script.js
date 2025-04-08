@@ -4,6 +4,7 @@ function startVideo() {
   const video = document.getElementById('memeVideo');
 
   overlay.style.display = 'none';
+  container.classList.add('active');
   container.style.display = 'flex';
 
   video.muted = false;
