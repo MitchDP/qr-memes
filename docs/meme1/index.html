@@ -4,17 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>You Got Pranked</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Tap-to-Prank Overlay -->
   <div id="overlay" onclick="startVideo()">
     <h1>👀 You really scanned a stranger’s shirt?</h1>
     <button class="click-bait-button">DO NOT CLICK THIS</button>
   </div>
 
+  <!-- Hidden Video + Buy Button Section -->
   <div class="container">
     <video id="memeVideo" controls>
-      <source src="meme.mp4" type="video/mp4">
+      <source src="meme.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
 
