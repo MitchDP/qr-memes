@@ -39,30 +39,31 @@ html, body {
 }
 
 #overlay h1 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
 }
 
-/* Big red button */
+/* Clean red button */
 .click-bait-button {
-  padding: 20px 36px;
-  font-size: 1.4rem;
+  padding: 14px 24px;
+  font-size: 1.1rem;
   font-weight: bold;
   background: red;
   color: white;
   border: none;
-  border-radius: 16px;
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
   transition: 0.2s ease;
+  max-width: 250px;
   width: 100%;
-  max-width: 300px;
 }
 
 .click-bait-button:hover {
   background-color: #cc0000;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-/* Main content */
+/* Main container */
 .container {
   display: none;
   flex-direction: column;
@@ -76,15 +77,15 @@ html, body {
 /* Video */
 video {
   width: 90%;
-  max-width: 300px;
+  max-width: 320px;
   margin-bottom: 30px;
   border-radius: 12px;
 }
 
 /* Buy button */
 .buy-button {
-  padding: 14px 28px;
-  font-size: 18px;
+  padding: 12px 24px;
+  font-size: 16px;
   font-weight: bold;
   background-color: red;
   color: white;
