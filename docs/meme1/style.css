@@ -1,124 +1,105 @@
-/* Reset + base styling */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  background-color: #000;
-  color: #fff;
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
   font-family: Arial, sans-serif;
   text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  overflow-x: hidden;
 }
 
-/* Container for video + button */
+/* Overlay */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.overlay-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 90%;
+}
+
+#overlay h1 {
+  font-size: 1.5rem;
+}
+
+/* Big red button */
+.click-bait-button {
+  padding: 20px 36px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  transition: 0.2s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.click-bait-button:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+/* Main content */
 .container {
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 40px 20px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.container.active video {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-/* Tap-to-prank overlay */
-#overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  padding: 20px;
-}
-
-#overlay h1 {
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-  padding: 0 10px;
-}
-
-/* Red dramatic clickbait button */
-.click-bait-button {
-  padding: 18px 36px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background: #ff0000;
-  color: white;
-  border: none;
-  border-radius: 14px;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
-  transition: transform 0.2s ease, background 0.2s ease;
-  text-transform: uppercase;
-}
-
-.click-bait-button:hover {
-  background: #cc0000;
-  transform: scale(1.05);
-}
-
-/* Subtle video preview effect */
+/* Video */
 video {
-  width: 90vw;
-  max-width: 360px;
+  width: 90%;
+  max-width: 300px;
+  margin-bottom: 30px;
   border-radius: 12px;
-  margin-top: 40px;
-  opacity: 0.2;
-  transition: opacity 0.4s ease, transform 0.3s ease;
 }
 
-/* Buy button styling */
+/* Buy button */
 .buy-button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 15px 30px;
+  padding: 14px 28px;
   font-size: 18px;
   font-weight: bold;
-  background-color: #ff0000;
+  background-color: red;
   color: white;
+  border-radius: 10px;
   text-decoration: none;
-  border-radius: 8px;
-  box-shadow: 0 4px #b30000;
-  transition: all 0.3s ease;
+  box-shadow: 0 4px #900;
+  transition: all 0.2s ease;
 }
 
 .buy-button:hover {
   background-color: #cc0000;
-  box-shadow: 0 2px #800000;
+  box-shadow: 0 2px #600;
   transform: translateY(2px);
 }
 
 .buy-button:visited {
   color: white;
-}
-
-/* Optional: iPhone-specific tweaks */
-@media only screen and (max-width: 430px) {
-  #overlay h1 {
-    font-size: 1.3rem;
-  }
-
-  .click-bait-button {
-    font-size: 1rem;
-    padding: 14px 28px;
-  }
-
-  .buy-button {
-    font-size: 16px;
-    padding: 12px 20px;
-  }
 }
