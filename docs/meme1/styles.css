@@ -45,11 +45,11 @@ html, body {
 /* Big red button */
 .click-bait-button {
   padding: 20px 36px;
-  font-size: 7.4rem;
+  font-size: 1.4rem;
   font-weight: bold;
   background: red;
-  color: red;
-  border: solid;
+  color: white;
+  border: none;
   border-radius: 16px;
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
   transition: 0.2s ease;
